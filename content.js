@@ -94,9 +94,9 @@ function calculateVariant(boardsize, blackfirst, answer) {
     let result = `;${currentColor}[${normalizeLocation(boardsize, pt.p)}]`
     if (isFirst) {
       if (answer.ty === 1) {
-        result += `N[正解]`;
+        result += `C[CORRECT]`;
       } else if (answer.ty === 3) {
-        result += `N[失败]`;
+        result += `C[WRONG]`;
       }
     }
     if (pt.c && pt.c.trim()) {
@@ -133,6 +133,7 @@ AW[bc][cc][ab][dd][de][df][cg][bg][ag](;B[cd]N[Õý½â]	;W[dc]	;B[ce]	;W[cf]	;B
 (;B[be]N[Ê§°Ü]	;W[bf]	;B[ae]	;W[ce]	;B[ac]	;W[ad])
 )
     */
+	
    let title = '';
    if (g_qq.blackfirst) {
      title += '黑先';
